@@ -1,0 +1,126 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@300&family=Lexend+Deca&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca:wght@400&display=swap');
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+:root {
+  /* COLORS */
+
+  --color-bright-orange: hsl(31, 77%, 52%);
+  --color-dark-cyan: hsl(184, 100%, 22%);
+  --color-very-dark-cyan: hsl(179, 100%, 13%);
+
+  --color-transparent-white: hsla(0, 0%, 100%, 0.75); /* Paragraphs */
+  --color-very-light-gray: hsl(0, 0%, 95%);/* Background/Headings/Buttons */
+
+  /* FONTS */
+  --font-heading: "Big Shoulders Display", sans-serif;
+  --font-default: "Lexend Deca", sans-serif;
+}
+
+/* BASE RESET */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* This defines 1rem == 10px */
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-default);
+  font-size: 1.5rem;
+  line-height: 1.6;
+  background-color: var(--color-very-light-gray);
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: fit-content;
+  display: flex;
+}
+
+.card {
+  max-width: 30rem;
+  padding: 5rem;
+}
+
+.card-1 {
+  background-color: var(--color-bright-orange);
+}
+
+.card-2 {
+  background-color: var(--color-dark-cyan);
+}
+
+.card-3 {
+  background-color: var(--color-very-dark-cyan);
+}
+
+.card__logo {
+  margin-bottom: 2rem;
+}
+
+.card__heading {
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  color: var(--color-very-light-gray);
+  font-size: 4rem;
+  margin-bottom: 3rem;
+}
+
+.card__details {
+  color: var(--color-very-light-gray);
+  margin-bottom: 7rem;
+}
+
+.card__btn {
+  text-decoration: none;
+  text-transform: capitalize;
+  padding: 1rem 2rem;
+  background-color: var(--color-very-light-gray);
+  border: 2px solid var(--color-very-light-gray);
+  border-radius: 10rem;
+  transition: background-color .2s, color .2s;
+}
+
+.card__btn:hover {
+  background-color: transparent;
+  color: var(--color-very-light-gray);
+}
+
+.card-1__btn {
+  color: var(--color-bright-orange);
+}
+
+.card-2__btn {
+  color: var(--color-dark-cyan);
+}
+
+.card-3__btn {
+  color: var(--color-very-dark-cyan);
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 59.375em) {
+  html {
+    height: auto;
+  }
+
+  .container {
+    flex-direction: column;
+    margin: 2rem;
+  }
+}
